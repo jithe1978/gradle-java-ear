@@ -4,8 +4,8 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Running build automation'
-                sh './gradlew build --no-daemon'
-                archiveArtifacts artifacts: 'dist/gradle-java-ear.ear'
+                sh './gradle build --no-daemon'
+                archiveArtifacts artifacts: 'build/lib/gradle-java-ear.ear'
             }
         }
     }
